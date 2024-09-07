@@ -1,0 +1,29 @@
+<section class="card">
+    <div class="card-header">
+        <div class="title">
+            <p>عرض التذكرة الخاصة بالفيلم</p>
+        </div>
+        <button class="delete-button" (click)="delete()"><i class="pi pi-trash"></i></button>
+    </div>
+
+    <div class="card-body">
+        <div class="link-section">
+            <input #www type="text" [value]="'www.tazkty.com/473847'" disabled />
+            <i class="pi pi-copy" (click)="copyToClipboard(www.value)"></i>
+        </div>
+        <p class="expiry">فعال حتى 15 يوليو 2023</p>
+    </div>
+    <div class="card-footer">
+        <div class="discount">
+            <div>
+                <p>خصم</p>
+                <p>25%</p>
+            </div>
+            <button pButton type="button" label="مشاركة" icon="pi pi-send" class="custom-btn"
+                (click)="share()"></button>
+        </div>
+        <div class="qr-code">
+            <qrcode [qrdata]="qrData" [width]="80"></qrcode>
+        </div>
+    </div>
+</section>

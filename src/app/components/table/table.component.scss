@@ -1,0 +1,125 @@
+th,
+td {
+    text-align: center;
+}
+
+.table-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px 10px;
+    margin-bottom: 10px;
+}
+
+.table-actions div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background-color: rgb(138, 116, 249);
+    color: white;
+    padding: 7px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cinema-tooltip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 200px;
+}
+
+p-table {
+    margin: 20px 0;
+}
+
+.p-button-secondary {
+    background-color: #6c757d;
+}
+
+.p-button-rounded {
+    border-radius: 50%;
+}
+
+.p-tooltip {
+    max-width: 300px;
+}
+
+.searchBar input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    //box-shadow: 0 2px 5px rgb(138, 116, 249);
+}
+
+.searchBar input::placeholder {
+    color: #999;
+}
+
+.searchBar input:focus {
+    border-color: rgb(138, 116, 249);
+    box-shadow: 0 0 5px rgb(138, 116, 249);
+}
+
+.searchBar input:hover {
+    border-color: #aaa;
+}
+
+.ticket-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ticket-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.ticket-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ticket-details {
+    color: gray;
+    font-size: 12px;
+}
+
+::ng-deep .p-dropdown {
+    padding: 4px 5px;
+}
+
+::ng-deep .p-dropdown-label {
+    padding: 0 5px;
+}
+
+::ng-deep .p-dropdown .p-inputtext {
+    padding: 4px 10px;
+}
+
+::ng-deep.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background: rgb(138, 116, 249);
+}
+
+::ng-deep .p-paginator {
+    direction: ltr;
+}
+
+@media (max-width:687px) {
+    .table-actions {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

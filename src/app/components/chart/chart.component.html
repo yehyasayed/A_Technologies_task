@@ -1,0 +1,16 @@
+<section>
+    <div class="content">
+        <div>
+            <h1>إحصائيات إستخدام القسيمة</h1>
+            <span>{{date | date}}</span>
+        </div>
+        <div>
+            <form>
+                <select (change)="selectionChange($event)">
+                    <option [value]="elment" *ngFor="let elment of selectionData">{{elment}}</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div echarts [options]="chartOptions" class="echart-container"></div>
+</section>

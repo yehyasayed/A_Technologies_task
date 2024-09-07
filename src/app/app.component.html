@@ -1,0 +1,16 @@
+<div class="dashboard-container">
+  <div class="ticket-section">
+    <div class="ticket-info">
+      <button pButton icon="pi pi-arrow-right" class="p-button-rounded p-button-text arrow-btn" (click)="onArrowClick()"></button>
+      <span class="ticket-number">{{ticket}}</span>
+    </div>
+    <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-outlined edit-btn" (click)="onEdit()">
+      <span class="edit-text">تعديل</span>
+    </button>
+  </div>
+  <div class="top-row">
+    <app-chart class="graph-section"></app-chart>
+    <app-card class="card-section"></app-card>
+  </div>
+  <app-table class="table-section"></app-table>
+</div>

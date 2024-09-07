@@ -1,0 +1,60 @@
+<section>
+    <div class="table-actions">
+        <div>
+            <p>مبيعات التذاكر</p>
+            <div class="searchBar">
+                <input matInput placeholder="Search" [(ngModel)]="searchWord" (keyup)="searchBar()">
+            </div>
+        </div>
+        <div>
+            <div class="card flex justify-content-center">
+                <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+            </div>
+            <button>حجز تذكرة جديدة</button>
+        </div>
+    </div>
+
+
+    <div class="table">
+        <p-table [value]="tickets" [paginator]="true" [rows]="4" [responsive]="true" [resizableColumns]="true"
+            sortMode="multiple" [totalRecords]="tickets.length" [rowsPerPageOptions]="[4, 10, 20]">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="id">#<p-sortIcon field="id"></p-sortIcon></th>
+                    <th pSortableColumn="ticketNumber">رقم التذكرة<p-sortIcon field="ticketNumber"></p-sortIcon></th>
+                    <th pSortableColumn="user">المستخدم<p-sortIcon field="user"></p-sortIcon></th>
+                    <th pSortableColumn="ticketPrice">قيمة التذكرة<p-sortIcon field="ticketPrice"></p-sortIcon></th>
+                    <th pSortableColumn="cinema">السينمات<p-sortIcon field="cinema"></p-sortIcon></th>
+                    <th pSortableColumn="peopleCount">عدد الأشخاص<p-sortIcon field="peopleCount"></p-sortIcon></th>
+                    <th pSortableColumn="purchaseCount">عدد مرات الشراء<p-sortIcon field="purchaseCount"></p-sortIcon>
+                    </th>
+                    <th>التذكرة</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-ticket>
+                <tr>
+                    <td>{{ ticket.id }}</td>
+                    <td>{{ ticket.ticketNumber }}</td>
+                    <td>{{ ticket.user }}<br>{{ ticket.userContact }}</td>
+                    <td>{{ ticket.ticketPrice | currency : 'USD' }}</td>
+                    <td><span class="cinema-tooltip">{{ ticket.cinema }}</span></td>
+                    <td>{{ ticket.peopleCount }}</td>
+                    <td>{{ ticket.purchaseCount }}</td>
+                    <td>
+                        <div class="ticket-row">
+                            
+                            <button pButton type="button" icon="pi pi-gift"
+                                class="p-button-rounded p-button-outlined"></button>
+                            <div class="ticket-info">
+                                <div class="ticket-name">{{ ticket.ticketFile.name }}</div>
+                                <div class="ticket-details">{{ ticket.ticketFile.size }}mb . {{ ticket.ticketFile.format }}</div>
+                            </div>
+                            <button pButton type="button" icon="pi pi-download"
+                                class="p-button-rounded p-button-outlined"></button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</section>

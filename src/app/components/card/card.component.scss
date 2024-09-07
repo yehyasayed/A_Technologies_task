@@ -1,0 +1,198 @@
+.card {
+    background-color: rgb(138, 116, 249);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Arial, sans-serif';
+    direction: rtl;
+
+    .card-header,
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-header i {
+        font-size: 25px;
+    }
+
+    .card-header .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-header .title p {
+        margin: auto;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .delete-button {
+        background-color: rgb(138, 116, 249);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .card-body {
+        margin: 20px 0;
+
+        .link-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 5px 10px;
+            width: 80%;
+            margin: auto;
+
+            input {
+                border: none;
+                background: none;
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            input:focus {
+                border: none;
+                background: none;
+            }
+
+            i {
+                font-size: 25px;
+            }
+
+            i:hover {
+                cursor: pointer;
+            }
+        }
+
+        .expiry {
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            color: #ffffff;
+        }
+    }
+
+    .card-footer {
+        align-items: flex;
+
+        qrcode {
+            margin: 20px auto;
+            display: block;
+        }
+
+        .qr-code img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .discount {
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            p {
+                color: white;
+                margin: 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .custom-btn {
+            background-color: rgb(138, 116, 249);
+            border: 1px solid white;
+            color: #fff;
+            font-size: 14px;
+            padding: 0px 10px;
+            border-radius: 5px;
+        }
+
+        .pi-send {
+            transform: rotate(45deg);
+        }
+
+    }
+}
+
+@media (max-width:991px) {
+    .top-row{
+        grid-template-columns: 1fr;
+    }
+    .graph-section {
+        overflow: auto;
+    }
+    .dashboard-container {
+        padding: 30px 20px 0 20px;
+    }
+}
+
+@media (max-width:1199px) {
+    .card {
+        .card-body {
+            .link-section {
+                width: 100%;    
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .card {
+        .card-body {
+            .link-section {
+                width: 80%;    
+            }
+        }
+        .card-footer {
+            align-items: flex;
+    
+            .qr-code img {
+                width: 80px;
+                height: 80px;
+            }
+    
+            .discount {
+                text-align: center;
+                display: flex;
+                gap: 10px;
+                p {
+                    color: white;
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+    
+            .custom-btn {
+                background-color: rgb(138, 116, 249);
+                border: 1px solid white;
+                color: #fff;
+                font-size: 12px;
+                padding: 0px 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width:687px) {
+    .card {
+        .card-body {
+            .link-section {
+                width: 90%;    
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.dashboard-container {
+    padding: 30px 50px 0 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.top-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card-section {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.graph-section {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.table-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card-section {
+    max-width: 500px;
+}
+
+.ticket-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f7fb;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.ticket-info {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.arrow-btn {
+    background-color: #f0f2f5;
+    border-color: transparent;
+    color: #333;
+}
+
+.arrow-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.edit-btn {
+    background-color: #f0f2f5;
+    border-color: transparent;
+    color: #7e57c2;
+    display: flex;
+    align-items: center;
+}
+
+.edit-text {
+    margin-right: 5px;
+    color: #7e57c2;
+}
+
+@media (max-width:991px) {
+    .top-row {
+        grid-template-columns: 1fr;
+    }
+
+    .graph-section {
+        overflow: auto;
+    }
+
+    .dashboard-container {
+        padding: 30px 20px 0 20px;
+    }
+}

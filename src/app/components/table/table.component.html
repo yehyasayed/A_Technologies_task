@@ -50,7 +50,7 @@
                                 <div class="ticket-details">{{ ticket.ticketFile.size }}mb . {{ ticket.ticketFile.format }}</div>
                             </div>
                             <button pButton type="button" icon="pi pi-download"
-                                class="p-button-rounded p-button-outlined"></button>
+                                class="p-button-rounded p-button-outlined" (click)="onSave()"></button>
                         </div>
                     </td>
                 </tr>

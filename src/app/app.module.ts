@@ -15,6 +15,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { QRCodeModule } from 'angularx-qrcode';
 import { PaginatorModule } from 'primeng/paginator';
+import { FileSaverModule } from 'ngx-filesaver';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,8 @@ import { PaginatorModule } from 'primeng/paginator';
     ClipboardModule,
     QRCodeModule,
     PaginatorModule,
+    FileSaverModule,
+    HttpClientModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     })
